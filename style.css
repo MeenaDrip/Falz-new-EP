@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding-bottom: 10px;
+    background-image: url(./assests/Image.jpeg);
+    background-size: cover;
+    /* background-image: linear-gradient(to left, #f4f5fa 10%, #26909e 70%);  */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+img{
+     height: 380px;
+     border-radius: 50%;
+     display: inline-block;
+     background: linear-gradient(120deg, #3197dc, #f6c792);
+     padding: 5px;
+}
+h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color:aliceblue;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cube{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #357b87;
+    padding: 8px 30px;
+    border-radius: 10px;
+    color:aliceblue;
+    border-radius: 20px;
+    border-bottom:12px solid rgba(128, 204, 255, 0.929);
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.words {
+    font-size: 18px;
+}
+a{
+    border-bottom: 7px solid #26909e;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 500;
+    color: aliceblue;
+    font-size: large;
+    margin-bottom: 5px;
+}
+a:hover{
+    color: #26909e;
+}
+@media (max-width: 760px) {
+
+    img{
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .counter {
+        font-size: 1.5rem;
+    }
+    .words {
+        font-size: 0.9rem;
+    }
+}

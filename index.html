@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EP Showdown!!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assests/favicon.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div class="pic"><img src="./assests/Image.jpeg" alt="cover photo"></div>
+    <h2>"Before the Feast"</h2>
+    <p>Coming out in</p>
+
+    <div class="box">
+        <div class="cube">
+        <div id="day" class="counter"></div>
+        <span class="words">Days</span>
+        </div>
+        
+    <div class="cube">
+    <div id="hour" class="counter"></div>
+    <span class="words">Hours</span>
+    </div>
+   
+        <div class="cube">
+        <div id="minute" class="counter"></div>
+        <span class="words">Minutes</span>
+        </div>
+    
+    <div class="cube">
+    <div id="second" class="counter"></div>
+    <span class="words">Seconds</span>
+    </div>
+</div>
+<a href="http://x.com/falzthebahdguy">View on Twitter(X)</a>
+<script>
+    var targetDate = new Date('June 7, 2024 00:00:00').getTime();
+     function newEP(){
+        var current = new Date().getTime();
+        difference = targetDate - current;
+
+    var second = 1000;
+    var minute = second * 60;
+    var hour = minute * 60;
+    var day = hour * 24;
+
+    var dy = Math.floor(difference / (day));
+    var hr = Math.floor((difference % (day)) /(hour));
+    var ms = Math.floor((difference % (hour)) / (minute));
+    var sd = Math.floor((difference % (minute)) / (second));
+
+    document.getElementById('day').innerText = dy;
+    document.getElementById('hour').innerText = hr;
+    document.getElementById('minute').innerText = ms;
+    document.getElementById('second').innerText = sd;
+}
+    setInterval(function(){
+        newEP();
+    }, 1000)
+
+</script>
+</body>
+</html>
